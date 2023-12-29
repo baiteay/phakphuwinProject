@@ -11,17 +11,15 @@ class premierTeam extends StatefulWidget {
 }
 
 class _premierTeamState extends State<premierTeam> {
-
   List<Course>? course = [];
   bool isLoding = true;
   Future<void> _getData() async {
     var url = Uri.parse("https://noraphat.dev/web_api/get_team_name/");
-    
+
     var response = await http.get(url);
     if (response.statusCode == 200) {
       print('Responese : ${response.statusCode}');
-      final Team product =
-          Team.fromJson(convert.jsonDecode(response.body));
+      final Team product = Team.fromJson(convert.jsonDecode(response.body));
       setState(() {
         course = product.course;
         isLoding = false;
@@ -42,7 +40,7 @@ class _premierTeamState extends State<premierTeam> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        backgroundColor: Color.fromARGB(255, 131, 131, 131),
         title: const Text("Team Page"),
       ),
       body: isLoding == true
@@ -64,12 +62,10 @@ class _premierTeamState extends State<premierTeam> {
                   title: Text('${course![index].teamname}'),
                   trailing: Icon(Icons.arrow_right),
                   onTap: () {
-                    Navigator.pushNamed(context, 'stack/map',
-                    
-                    arguments: {
-                      'team_lat':course![index].teamlat,
-                      'team_long':course![index].teamlong,
-                      'team_detail':course![index].teamdetail
+                    Navigator.pushNamed(context, 'stack/map', arguments: {
+                      'team_lat': course![index].teamlat,
+                      'team_long': course![index].teamlong,
+                      'team_detail': course![index].teamdetail
                     });
                   },
                 );

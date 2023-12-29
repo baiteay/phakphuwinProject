@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class MyHomepage extends StatefulWidget {
   const MyHomepage({super.key});
 
@@ -13,14 +12,22 @@ class _MyHomepageState extends State<MyHomepage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        backgroundColor: Color.fromARGB(255, 131, 131, 131), // กำหนดสีของ AppBar ที่นี่
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            ElevatedButton(onPressed: (){Navigator.pushNamed(context, 'stack/teamball');
-            }, child: Text("เข้าดูทีม")),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, 'stack/teamball');
+                },
+                style: ElevatedButton.styleFrom(
+                  primary: Color.fromARGB(255, 209, 199, 199),onPrimary: Colors.white,
+                  padding: EdgeInsets.symmetric(
+                      horizontal: 120, vertical: 30), // ปรับขนาดพื้นที่ปุ่ม
+                ),
+                child: Text("เข้าดูทีม", style: TextStyle(fontSize: 25))),
           ],
         ),
       ),
