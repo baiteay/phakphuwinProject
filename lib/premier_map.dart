@@ -48,7 +48,7 @@ class _premierMapState extends State<premierMap> with TickerProviderStateMixin {
 
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 131, 131, 131),
+        backgroundColor: Color.fromARGB(255, 165, 48, 233),
         title: const Text('Map Page'),
         actions: <Widget>[
           IconButton(
@@ -86,7 +86,7 @@ class _premierMapState extends State<premierMap> with TickerProviderStateMixin {
                               child: Column(
                                 mainAxisSize: MainAxisSize.min,
                                 children: [
-                                  Text('Information:',
+                                  Text('Team Information:',
                                       style: TextStyle(fontSize: 20)),
                                   SizedBox(height: 10),
                                   Text(

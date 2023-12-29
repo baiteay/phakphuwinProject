@@ -40,7 +40,7 @@ class _premierTeamState extends State<premierTeam> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 131, 131, 131),
+        backgroundColor: Color.fromARGB(255, 165, 48, 233),
         title: const Text("Team Page"),
       ),
       body: isLoding == true

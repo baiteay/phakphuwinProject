@@ -12,10 +12,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Premier League',
+      title: 'Teay Map',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSwatch(
-          primarySwatch: Colors.grey,
+          primarySwatch: Colors.purple,
           // กำหนดสีหลักของแอป
         ),
       ),
